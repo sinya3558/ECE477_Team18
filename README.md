@@ -1,2 +1,12 @@
 # ECE477_Team18
-This is the repository for "Team 18" from the Senior Design Lab in Purdue University
+Team Members: Harim Choe, Tristan Marta, So Won Kim, Seunga Kim
+
+This is the repository for "Team 18" from the digital Senior Design Lab (ECE 477) in Purdue University
+
+Our final solution is to build a better/upgraded system for an average karaoke device. The karaoke machines out in the commercial describe the score in terms of the pitch or it does not contain any scoring element. We feel that this description isn’t enough and it requires a much more objective viewpoint. We believe that making a system that could provide more contextual feedback on how you can improve your singing skills would be much better. We would design our own mixer which functions as an entire system that will receive data from electrical devices and compute a more complex matrix to calculate the score. Furthermore, we would also build a software with the intent of displaying a leaderboard and also a wide selection of music to choose from. More specific information regarding our design is detailed below.
+
+1. Initial Data Processing: The process begins with the user signing into a microphone. Their analog voice signal is converted into a digital signal using an Analog-to-Digital Converter (ADC).
+2. Score Calculation: The digital data is then transmitted to the computer's control unit. Since each musical note has a distinct pitch, the system can assess if the user's voice aligns with the ideal pitch of the chosen song. Then calculates the score and feedback for the user.
+3. Music Selection: Users select music through a Graphic User Interface (GUI) on a phone app. The app displays a list of available songs, and once a song is selected, it's sent to the computer for playback via WiFi communication. The song continues until it reaches the end, a process monitored by a simple finite-state machine (FSM). Concurrently, the computer calculates the number of rising edges in the song and compares it with the rising edges in the user's voice to determine the score. A closer match in the number of rising edges results in a higher score.
+4. Phone Application: After the score is calculated, it is saved by the machine and displayed on the phone app. The app maintains a record of the highest scores achieved by the user. The app's GUI facilitates easy navigation and selection of songs, enhancing the user's interaction with the system.
+5. Speaker: The speakers will output the music from the single chip processor that has the music files.
